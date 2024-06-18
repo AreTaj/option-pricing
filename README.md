@@ -1,2 +1,2 @@
-# options-calculator
+# options-pricing
 Python options price calculator
