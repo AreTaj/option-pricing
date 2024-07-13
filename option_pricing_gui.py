@@ -3,9 +3,12 @@ import requests
 import json
 import numpy as np
 from scipy.stats import norm
+from config import api_key
 
 # FRED API key (consider concealing in environmental variable or configuration file)
-api_key = 'd04e0528daa3aa373b4bf283a573211c' 
+api_key = api_key 
+if not api_key:
+    raise ValueError("API Key not found in configuration file")
 
 def get_treasury_yield():
     series_id = 'DGS2'
@@ -161,6 +164,7 @@ custom_yield_var_button.grid(row=5, columnspan=2, padx=5, pady=5)
 
 # TODO Custom Risk-Free Rate Label and Entry
 if custom_yield_var == True:
+    print("Checkbox bool: ", custom_yield_var)
     custom_yield_label = Label(window, text="Custom Risk-Free Rate:", state='disabled')
     custom_yield_label.grid(row=6, column=0, padx=5, pady=5, state='disabled')
     custom_yield_entry = Entry(window, width=20, state='disabled')  # Initially disabled
