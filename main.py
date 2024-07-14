@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Entry, Button, Frame, CENTER, BooleanVar, Checkbutton, IntVar, Radiobutton
+from tkinter import Tk, Label, Entry, Button, CENTER, BooleanVar, Checkbutton, IntVar, Radiobutton
 import requests
 import json
 import numpy as np
