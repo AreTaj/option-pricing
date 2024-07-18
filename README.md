@@ -33,7 +33,7 @@ Risk-Free Rate Integration:
 
 Optional Custom Risk-Free Rate:
 •	The program acknowledges that the user may want to use a different risk-free rate than the common 2-year bond yield, which might not always be the ideal risk-free rate for all scenarios.
-•	It offers an (under development) functionality where users can choose to input a custom risk-free rate value.
+•	It offers a functionality where users can choose to input a custom risk-free rate value.
 
 Theoretical Option Price Calculation:
 •	Once all inputs are gathered, the program employs the Black-Scholes formula to calculate the theoretical price for the chosen option type (call or put).
@@ -51,18 +51,14 @@ Underlying Components:
         o	black_scholes: This function implements the Black-Scholes formula, the brains behind the option pricing calculations. It takes the provided parameters and calculates the theoretical price for a call or put European option, meaning the option is held to expiration.
 
 Current Limitations and Future Enhancements:
-•	The custom risk-free rate functionality using a checkbutton and entry field requires further development to enable/disable the input field based on the checkbutton state.
-•	Possibilities for expansion of the program's capabilities include:
-    o	Implementing full functionality for the custom risk-free rate toggle.
-    o	Providing users with the ability to specify the desired maturity for the risk-free rate by allowing input of a custom risk-free rate, offering more flexibility.
     o	Strengthening error handling mechanisms to catch invalid user input beyond value types (e.g., negative stock prices).
     o	Enriching the user experience by incorporating a graph that visually represents how option prices fluctuate with changes in input values.
     
 Using the Program:
-1.	Save the code as a Python file (e.g., stock_option_pricing.py).
+1.	Save the code as a Python file (e.g., option_pricing.py).
 2.	Ensure you have the required libraries (tkinter, requests, json, numpy, and scipy) installed. You can install them using pip install tkinter requests json numpy scipy.
-3.	Securely store your FRED API key in the api_key variable (consider using environment variables for better security practices).
-4.	Execute the program from the command line using: python stock_option_pricing.py.
+3.	Securely store your FRED API key in the api_key variable.
+4.	Execute the program from the command line using: python option_pricing.py.
 5.	Interact with the GUI elements by entering option details and clicking the "Calculate" button to trigger the calculations.
 
 Disclaimer:
